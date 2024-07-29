@@ -1,0 +1,21 @@
+---
+//
+const { title } = Astro.props
+---
+
+<div class="card">
+  <h1>{title ?? 'Sin Title 😁'}</h1>
+  <h3>Subtitle</h3>
+  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore magnam reprehenderit ea, cum ipsam laborum quasi</p>
+  <h2>😃</h2>
+</div>
+
+<style>
+   .card{
+     padding: 20px;
+     border: 1px solid #ccc;
+     border-radius: 5px;
+     margin: 10px;
+     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1,)
+   }
+</style>
