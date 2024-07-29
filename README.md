@@ -59,6 +59,9 @@ const { title } = Astro.props
 </style>
 ```
 
+## Desplegar Archivos Estaticos GH pages
+1. Se crea una nueva rama que unicamente contenga los archivos estaticos, generados al hacer el build del proycto, estos archivos deben estar directamente en la raiz del repositorio, sin la carpeta dist.
+
 
 
 #  🔵🔵🔵🔵🔵🔵 Readme Oficial 🔵🔵🔵🔵🔵🔵
