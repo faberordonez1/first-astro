@@ -59,7 +59,34 @@ const { title } = Astro.props
 </style>
 ```
 
+# Habilitar frameworks
 
+Astro por defecto esta creado para sitios web estaticos, pero tambien se puede habilitar para trabajar con react y otros frameworks, para esto se deben agregar los paquetes necesarios.
+
+## React
+
+Se crea el componente [HelloComponent.jsx](/first-astro/src/components/HelloComponent.jsx)
+
+Se importa el componente en index.astro y se intenta renderizar, pero falla, porque no estan instalados los paquetes del framework react, para usarlo de forma correcta se deben instalar con el sigte comando y luego y, segun corresponda.
+
+```sh
+npx astro add react
+```
+
+Con esto ya se pueden importar componentes de react
+
+### Habilitando Interactive components
+En el componente de react agregamos un boton para disparar una alert de js, pero por defecto no funciona, esto ocurre porque astro por defecto crea web estaticas, entonces se le debe indicar a astro que debe renderizar el componente como cliente, es decir interactivo o con lógica js (componentes hidratados).
+```jsx
+<button onClick={() => {
+        alert('Hello World')
+    }}>Click Me</button>
+```
+Para habilitar esto se debe agregar la propiedad client cuando se usa el componente, junto al estado de la pagina donde se va a cargar el js
+
+```html
+<HelloComponent client:visible/>
+```
 
 #  🔵🔵🔵🔵🔵🔵 Readme Oficial 🔵🔵🔵🔵🔵🔵
 
